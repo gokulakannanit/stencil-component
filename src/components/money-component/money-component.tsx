@@ -2,7 +2,8 @@ import { Component, h, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'money-component',
-  styleUrl: 'money-component.css'
+  styleUrl: 'money-component.css',
+  shadow: true,
 })
 export class MoneyComponent {
 

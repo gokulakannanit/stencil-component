@@ -2,7 +2,8 @@ import { Component, h, State } from '@stencil/core';
 
 @Component({
   tag: 'app-root',
-  styleUrl: 'app-root.css'
+  styleUrl: 'app-root.css',
+  shadow: true,
 })
 export class AppRoot {
 
@@ -40,15 +41,6 @@ export class AppRoot {
   updateFormValue(controlName, value, isvalid){
     this.formControls[controlName].value = value;
     this.formControls[controlName].isValid = isvalid;
-    /*this.formControls = {
-      ...this.formControls,
-      ['euro']: {
-        ...this.formControls['euro'],
-        value: value,
-        isValid: isvalid
-      }
-    };*/
-    console.log(this.formControls);
   }
   
   changeFormValue(controlName, value) {
