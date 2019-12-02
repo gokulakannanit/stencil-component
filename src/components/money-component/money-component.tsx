@@ -18,12 +18,12 @@ export class MoneyComponent {
 
   @State() cent = null;
 
-  updateMoney(controlName, value){
+  updateMoney(controlName, value) {
     this[controlName] = value;
     this.money = (this.euro ? this.euro : 0) + ',' + (this.cent ? this.cent : '00');
     var euroPattern = /^(([^0]{1})([0-9])*|(0{1}))(\,\d{2}){0,1}?$/;
     this.isvalid = euroPattern.test(value);
-    if(this.isvalid){
+    if(this.isvalid) {
       this.updateform('euro', this.money, this.isvalid);
     }
   }
