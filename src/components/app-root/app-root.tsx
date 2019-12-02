@@ -30,10 +30,6 @@ export class AppRoot {
     },
     euro: {
       value: null,
-      validate: value => {
-        var euroPattern = /^(([^0]{1})([0-9])*|(0{1}))(\,\d{2}){0,1}?$/;
-        return euroPattern.test(value);
-      },
       isValid: false
     },    
   };
@@ -52,10 +48,6 @@ export class AppRoot {
           isValid: this.formControls[controlName].validate(value)
         }
       };
-  }
-
-  doFormValidation() {
-
   }
 
   handleSubmit(e) {
